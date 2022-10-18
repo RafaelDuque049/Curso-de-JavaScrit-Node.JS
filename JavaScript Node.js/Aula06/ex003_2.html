@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Dados</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: rgb(22, 21, 21);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tratamento de Dados/2</h1>
+
+    <script>
+        var n1 = window.prompt('digite um número:'); // String
+        var n2 = window.prompt('digite mais algum número:') // String
+        var result = n1 + n2
+        window.alert(`O valor da soma deu ${result}.`)
+
+        // String + String = contatenação
+        // Number + Number = adição
+        
+        // no caso acima, o JavaScript entende como String as variáveis e faz uma contatenação, para somar, a forma
+        // correta é usar a função "Number.parseInt()" ou "Number.parseFloat", da seguinte forma.
+        var n1 = Number.parseInt(window.prompt('digite um número:')); // Number
+        var n2 = Number.parseFloat(window.prompt('digite mais algum número:')); // Number flutuante
+        var result2 = n1 + n2
+        window.alert(`O valor da soma deu ${result2}.`)
+
+
+        /* MODIFICAR O TIPO PRIMITIVO */
+
+        // Number.parseInt("10") = 10
+        // Number.parseFloat(10) = 10.0
+
+        // String(10) = "10"
+        // (10).toString = "10"
+
+    </script>
+</body>
+</html>
