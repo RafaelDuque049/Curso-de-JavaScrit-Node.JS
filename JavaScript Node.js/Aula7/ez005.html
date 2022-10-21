@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: rgb(22, 21, 21);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores</h1><hr>
+    
+    <script>
+        document.write(`${5 + 3 / 2}<br>`) /* O output vai ser 6.5, o motivo desse retorno é porque sera feita
+        primeiro a divisão, e logo após e adição, por conta que na ordem de precedência, a divisão vem primeiro*/
+        
+        document.write((5 + 3)/ 2) /* Nesse exemplo, o retorno vai ser 4, já que nessa ordem, a soma vai acontecer primeiro porque
+        os numeros somados então entre os paranteses, que na ordem de procedênia vem logo antes da multiplicação.*/
+
+        // Para melhor entendimento da ordem de precedência, vou listar ela:
+        /*  primeiro vem os parenteses = ()
+            logo depois as potências = **
+            após as potências vem a multiplicação a divisão e o resto = * / %
+            e por fim, vem a adição e subtração = + -
+        */
+
+        var n = 111;
+        n = n + 4 /* Normalmente quando se vai fazer uma soma em uma variável por ela mesma, pode ser usada essa forma para fazer a soma,
+        mas também é possível fazer a soma de uma forma mais curta*/
+
+        n += 4 /* Dessa seguinte forma, é possível fazer a mesma soma só que de forma mais resumida, mais limpa visualmente, melhorando muito o seu código.*/
+
+        // essa forma não vale apenas para a soma, mas sim todas as operações matemáticas, como vai ser mostrado a diante.
+        n -= 1 // Subtração
+        n *= 6  // Mutiplicação
+        n %= 3 // Resto da divisão
+        n **= 6 // potência
+        n /= 3 // Divisão
+        
+        /* é possível fazer de forma mais curta, mas os numeros vão ser somados ou substraidos por apenas 1, a seguinte será mostrado como fazer isso*/
+        var number = 20;
+        window.alert(number)
+        ++number // vai ser somado ao número já declarado mais o número 1, que nesse caso vai dar o resultado 21
+        window.alert(number)
+        --number // Vai ser subtraido por 1 dando o resultado 19
+        window.alert(number)
+    </script>
+</body>
+</html>
