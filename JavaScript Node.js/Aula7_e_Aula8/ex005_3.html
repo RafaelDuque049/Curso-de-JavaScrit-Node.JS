@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: rgb(22, 21, 21);
+            color: white;
+        }
+    </style>
+<body>
+    <h1>Operadores Lógicos/3</h1><hr>
+
+    <script>
+        // OS OPERADORES LÓGICOS SÃO:
+        /* ! = NOT/não | Só é aceito quando o primeiro valor não é igual ao valor pós o "!".
+          && = And/e | Só se satesfaz quando o valor coincide com 1 ou demais caracteristicas passadas junto ao "&&".
+          || = Or/ou | Aceita o valor se ele coincidir com o primeiro ou os demais parâmetros passados.
+        */
+
+        // Demonstrativo na prática
+        var a = 8;
+        var b = 6;
+        document.write(`${a > b && b % 2 == 0}<br>`) /* o valor retornado vai ser "True", já que A(8) é maior que B(6) logo vai retornar "True"
+         e o resto de B(6) divido por Dois dá o resultado Zero, então logo vai retorna dois "True" e o operador vai entender que pode ser passado o valor "True".*/
+
+        document.write(`${a < b || b % 2 == 0}<br>`) /* Aqui o primeiro valor dá o resultado de "False" e o Segundo dá o valor de "True",
+         o operador retorna o valor "True" porque a o objetivo dele é verificar se um dos valores satisfaz o desejado, se ele tiver algum retorno de "True"
+          ele vai retornar o mesmo valor, se não retorna apenas "False".*/
+
+        // Os operadores lógicos também contem ordem de precedência como os Operadores Aritiméticos, e eles são
+        /*
+        1. ! = Not
+        2. && = And
+        3. || = Or
+        */
+
+
+        // Para na hora de montar um Script não ficar confuso, aqui está a ordem de precedência global de todos os Operadores listados em quem vai ser lido primeiro:
+        /*
+
+        1. (), **, / ...
+        2. >, <,  >= ... (Operadores relacionais não tem ordem de precedência, é lido quem vir primeiro.)
+        3. !
+        4. &&
+        5. ||
+
+        */
+
+    </script>
+</body>

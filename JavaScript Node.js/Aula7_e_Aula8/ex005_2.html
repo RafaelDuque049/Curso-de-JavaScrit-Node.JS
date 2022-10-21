@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: rgb(22, 21, 21);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores relacionais/2</h1><hr>
+
+    <script>
+        /* os operadores relacionais no JavaScript são:*/
+        // > : Maior que
+        // < : Menor que
+        // >= : Maior ou igual que
+        // <= : Menor ou igual que
+        // == : Igual a
+        // != : Diferente a
+        // alguns exemplos de como funciona na prática esses operadores
+        document.write(`10 > 9 = ${10 > 9}<br>`) // aqui o retorno vai ser "True", já que dez é maior que nove.
+        document.write(`20 < 10 = ${20 < 10}<br>`) // Logo aqui, o resultado é "False", já que vinte não é menor que dez.
+        document.write(`20 != 20 = ${20 != 20}<br>`) // O retorno aqui vai ser "False", já que vinte não é diferente dele mesmo.
+        document.write(`19 <= 19 = ${19 <= 19}<br>`) /* o valor retornado vai ser "True", já que é dado para ele comparar se o primero
+        valor é menor ou igual ao segundo valor, como são valores iguais, ele retorna "True" como resposta.*/
+
+        // é possível fazer a junsão de operadores aritméticos e operacionais em uma mesma declaração sem nenhum problema, um exemplo é a seguinte forma.
+        document.write(`10 <= 5 + 6 = ${10 <= 5 + 6}<br>`) // o resultado vai ser "True" já que ocorre o calculo matemático primeiro e logo após a comparação.
+
+        // os operadores relacionais não se limitam a ser usados apenas para numeros, mas também podem ser usados em String, dá seguinte forma.
+        document.write(`${'String' == "String"}<br>`) // o valor retornado vai ser "True", já que ele relaciona se ambos são identicos.
+        
+        document.write(`${'simm' >= 'sim'}<br>`) /* nesse caso, ele ainda vai retornar o valor "True", mas o que faz ele retornar "True" é porque 
+        ele varifica se ambas Strings tem a mesma quantidades de caracteres, já que está especificado se o valor é MAIOR ou IGUAL.*/
+ 
+    </script>
+    
+</body>
