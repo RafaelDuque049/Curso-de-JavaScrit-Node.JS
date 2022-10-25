@@ -9,8 +9,6 @@
     <style>
         body{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-align: center;
-            color: white;
         }
     </style>
 <body>
@@ -49,6 +47,7 @@
         var corpo = document.body; 
         corpo.style.background = 'black'; // Modifica a cor do site 
         document.write(p1.innerText+'<br>') // Escreve o texto sem formatação
+        corpo.style.textAlign = 'center', corpo.style.color = 'white'
 
 
         var d = document.getElementById('msg')
@@ -56,7 +55,7 @@
         d.innerHTML = 'Estou aguardando comandos...'
         d.style.color = 'aqua', d.style.fontSize = '30px'
 
-
+        
         var div_html = document.querySelector('div#msg2') // Se usa "." para declara uma classe, e '#' para declarar uma Div.
         div_html.style.color = 'black'
         div_html.style.background = 'aqua', div_html.style.fontSize = '30px'
