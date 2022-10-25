@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo o DOM</title>
+    <link rel="shortcut icon" href="https://freesvg.org/img/js_logo.png" type="image/x-icon">
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            color: white;
+        }
+    </style>
+<body>
+    <h1> Conhecendo e Aprendendo DOM </h1><hr>
+    <!--
+        Siginificado de DOM: Document Object Model/Modelo de objeto de documento
+
+        Dom, é um conjunto de objetos dentro do navegador que vai dar acesso a 
+        componentes internos do Web Site.
+    -->
+
+    <!--
+        Árvore DOM:
+            Parent/(Pai/Mãe) = Função que origina um Child
+            Child/filho = Vem de uma função do Parent
+
+        Um exemplo: Body e Head, são um Child do Html.
+    -->
+
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique Aqui</div>
+    <div id="msg2">Mensagem</div>
+    
+    <script>
+        // Métodos que vão ser usados.
+        /*
+        getElementByTagName, getElementById, getElementByName, getElementByClassName e querySelector 
+        */
+
+        var p1 = document.getElementsByTagName('p')[1]; // Recebe os dados no paragráfo
+        document.write(p1.innerHTML+'<br>') // Escreve o paragráfo com as formatações(não funciona em algumas funções como o "Alert")
+        p1.style.color = 'aqua'; // Modifica a cor do paragráfo
+        
+
+        var corpo = document.body; 
+        corpo.style.background = 'black'; // Modifica a cor do site 
+        document.write(p1.innerText+'<br>') // Escreve o texto sem formatação
+
+
+        var d = document.getElementById('msg')
+        d.style.background = 'blue'
+        d.innerHTML = 'Estou aguardando comandos...'
+        d.style.color = 'aqua', d.style.fontSize = '30px'
+
+
+        var div_html = document.querySelector('div#msg2') // Se usa "." para declara uma classe, e '#' para declarar uma Div.
+        div_html.style.color = 'black'
+        div_html.style.background = 'aqua', div_html.style.fontSize = '30px'
+    </script>
+</body>
