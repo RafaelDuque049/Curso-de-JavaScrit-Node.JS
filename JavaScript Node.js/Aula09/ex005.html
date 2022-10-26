@@ -36,17 +36,23 @@
     <script>
         // Métodos que vão ser usados.
         /*
-        getElementByTagName, getElementById, getElementByName, getElementByClassName e querySelector 
+        getElementByTagName: seleciona item pelo nome de tag/marca.
+        getElementById: seleciona pelo nome no id.
+        getElementByName: seleciona pelo nome.
+        getElementByClassName: seleciona pelo nome na Classe.
+        querySelector: Seleciona pela tag e pelo nome.(Mais recomendado para uso) 
+        quertSelectorAll:
+        Obs: são todos os navegadores que suporta ECMA Script que tem suporte ao querySelector, os novagadores mais antigos pode aparecer com erros.
         */
 
         var p1 = document.getElementsByTagName('p')[1]; // Recebe os dados no paragráfo
-        document.write(p1.innerHTML+'<br>') // Escreve o paragráfo com as formatações(não funciona em algumas funções como o "Alert")
+        document.write('<br>'+p1.innerHTML+'<br>') // innerHTML: Escreve o paragráfo com as formatações(não funciona em algumas funções como o "Alert")
+        document.write(p1.innerText+'<br>') // innerText: Escreve o texto sem formatação
         p1.style.color = 'aqua'; // Modifica a cor do paragráfo
         
 
         var corpo = document.body; 
         corpo.style.background = 'black'; // Modifica a cor do site 
-        document.write(p1.innerText+'<br>') // Escreve o texto sem formatação
         corpo.style.textAlign = 'center', corpo.style.color = 'white'
 
 
