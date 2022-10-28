@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Eventos do DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        h1{
+            color: #00ffff;
+            text-align: center;
+        }
+        div#area{
+            border-radius: 10px;
+            background-color: white;
+            width: 200px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo Eventos do DOM</h1><hr>
+    <div id="area">Interaja aqui...</div>
+
+    <script>
+        var clicado = document.getElementById('area')
+        
+        // ".addEventListener" verifica se alguma ação está sendo feita.
+        clicado.addEventListener('click', clicar) // ação de clicar
+        clicado.addEventListener('mouseover', sobrepor) // ação de sobrepor o mouse.
+        clicado.addEventListener('mouseout', saiu) // ação de retirar o mouse.
+
+        function clicar(){
+            clicado.style.background = 'aqua', clicado.innerText = 'Clicou :)';
+        }
+
+        function sobrepor(){
+            clicado.style.background = '#D3D3D3', clicado.innerText = 'entrou'
+        }
+
+        function saiu(){
+            clicado.style.background = 'white', clicado.innerText = 'saiu'
+        }
+    </script>
+</body>
+</html>
