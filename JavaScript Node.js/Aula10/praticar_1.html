@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://freesvg.org/img/js_logo.png" type="image/x-icon">
+    <title>Treino</title>
+    <style>
+        body{
+            color: aqua;
+            background-color: rgb(28, 27, 27);
+        }
+        div#box{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            border-radius: 10px;
+            text-align: center;
+            color: black;
+            background: white;
+            height: 60px;
+            width: 200px;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Praticando</h1><hr>
+
+    <div id="box">Teste...</div>
+
+    <script>
+        var div_html = document.querySelector("div#box")
+
+        div_html.addEventListener('click', clicar)
+        div_html.addEventListener('mouseover', mouse_entrou)
+        div_html.addEventListener('mouseout', mouse_saiu)
+
+        function clicar(){
+            div_html.style.background = 'red', div_html.innerHTML = ('<strong>Clicou<strong>')
+        }
+        function mouse_entrou(){
+            div_html.style.color = 'black', div_html.style.background = 'aqua'
+            div_html.innerHTML = ('Entrou')
+        }
+        function mouse_saiu(){
+            div_html.style.color = 'black', div_html.style.background = 'pink'
+            div_html.innerText = 'Saiu'
+        }
+    </script>
+</body>
+</html>
