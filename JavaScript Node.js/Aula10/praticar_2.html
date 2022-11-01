@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://freesvg.org/img/js_logo.png" type="image/x-icon">
+    <title>Teste</title>
+    <style>
+        body{
+            background-color: rgb(20, 20, 20);
+            color: orange;
+            text-align: center;
+        }
+        div.box{
+            height: 60px;
+            width: 200px;
+            line-height: 60px;
+            background-color: aqua;
+            color: black;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>~Teste JavaScript~</h1><hr>
+    <div class="box">Clique Aqui</div>
+
+    <script>
+        var button = document.querySelector('div.box'), evento = '';
+
+        button.addEventListener('click', clique)
+        button.addEventListener('mouseover', entrou)
+        button.addEventListener('mouseout', saiu)
+
+        function mudar(m1, m2){
+            button.style.background = m1, button.innerHTML = `<strong>${m2}</strong>`;
+        }
+
+        function clique(){
+            mudar('red', 'Clicou')
+            evento = true
+        }
+
+        function entrou(){
+            mudar('blue', 'Entrou')
+            evento = true
+        }
+
+        function saiu(){
+            mudar('purple', 'Saiu')
+            evento = false
+
+            setTimeout(() => {
+                if (evento == false){
+                    mudar('aqua', 'Clique Aqui')
+                }
+             }, 3000);
+        }
+    </script>
+</body>
+</html>
