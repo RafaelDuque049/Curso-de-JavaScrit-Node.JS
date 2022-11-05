@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="https://freesvg.org/img/js_logo.png" type="image/x-icon">
+    <title>Praticando Conteúdo</title>
     <style>
         body{
             background-color: rgb(23, 22, 22);
@@ -12,26 +13,26 @@
         }
         .button{
             background-color: aqua;
-            height: 20px;
-            width: 50px;
-            border-radius: 10px;
+            width: 100px;
+            height: 30px;
         }
     </style>
 </head>
 <body>
-    <h1>Teste</h1><hr>
+    <h1>Praticando</h1><hr>
     <input type="number" name="" id="n1"> +
     <input type="number" name="" id="n2">
-    <input type="button" value="button" onclick="resultado()">
+    <input type="button" value="button" onclick="resultado()" class="button">
     <div class="resultado">resultado</div>
 
     <script>
         function resultado(){
-            var num1 = Number.parseInt(document.querySelector('input#n1').value)
-            var num2 = Number.parseInt(document.querySelector('input#n2').value)
+            let n1 = document.querySelector('input#n1').value, n2 = document.querySelector('input#n2').value
+
+            const num1 = Number.parseInt(n1 == ''? 0 : n1), num2 = Number.parseInt(n2 == ''? 0 : n2)
 
             document.querySelector("div.resultado").innerHTML = `${num1} + ${num2} = ${num1 + num2}`
         }
     </script>
 </body>
-</html>
+</html> 
