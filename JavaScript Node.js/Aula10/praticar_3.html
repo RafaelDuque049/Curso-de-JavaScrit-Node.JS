@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(23, 22, 22);
+            color: orange;
+        }
+        .button{
+            background-color: aqua;
+            height: 20px;
+            width: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste</h1><hr>
+    <input type="number" name="" id="n1"> +
+    <input type="number" name="" id="n2">
+    <input type="button" value="button" onclick="resultado()">
+    <div class="resultado">resultado</div>
+
+    <script>
+        function resultado(){
+            var num1 = Number.parseInt(document.querySelector('input#n1').value)
+            var num2 = Number.parseInt(document.querySelector('input#n2').value)
+
+            document.querySelector("div.resultado").innerHTML = `${num1} + ${num2} = ${num1 + num2}`
+        }
+    </script>
+</body>
+</html>

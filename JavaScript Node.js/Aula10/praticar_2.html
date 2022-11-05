@@ -12,7 +12,7 @@
             color: orange;
             text-align: center;
         }
-        div.box{
+        div{
             height: 60px;
             width: 200px;
             line-height: 60px;
@@ -26,10 +26,11 @@
 </head>
 <body>
     <h1>~Teste JavaScript~</h1><hr>
-    <div class="box">Clique Aqui</div>
+    <div class="box">Clique Aqui</div><br> <!--Declaração de Evento recomendada-->
+    <div class="box2" onclick="clique2()">Clique Aqui</div> <!--Declaração de Evento Inline-->
 
     <script>
-        var button = document.querySelector('div.box'), evento = '';
+        let button = document.querySelector('div.box'), evento = '';
 
         button.addEventListener('click', clique)
         button.addEventListener('mouseover', entrou)
@@ -58,6 +59,16 @@
                     mudar('aqua', 'Clique Aqui')
                 }
              }, 3000);
+        }
+
+
+        function clique2(){
+            var div2_html = document.querySelector("div.box2")
+            div2_html.style.background = 'red';
+
+            setTimeout(() => {
+                div2_html.style.background = 'aqua',  div2_html.innerHTML = '<strong>Clique Aqui</strong>';
+            }, 3000);
         }
     </script>
 </body>
