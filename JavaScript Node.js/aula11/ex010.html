@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://freesvg.org/img/js_logo.png" type="image/x-icon">
+    <title>Aprendendo Condições</title>
+    <style>
+        body{
+            background-color: rgb(22, 21, 21);
+            color: white;
+        }
+        h1{
+            font-size: 40px;
+            margin: 2px;
+        }
+        .button{
+            font-size: 17px;
+            background-color: aqua;
+            width: 100px;
+            height: 28px;
+            border-radius: 10px;
+        }
+        .entrada{
+            color: white;
+            border-color: aqua;
+            background-color: rgb(39, 36, 36);
+            border-radius: 6px;
+        }
+        .resultado{
+            color: white;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: orange;">Condições</h1><hr>
+    
+    Digite sua velocidade atual:
+    <input type="number" name="entrada" class= 'entrada' id="vel">
+    <input type="button" value="Verificar" class="button">
+    <div class="resultado">Resultado</div>
+    <div class="msg"></div>
+
+    <script>
+        document.querySelector('input.button').addEventListener('click', calcular)
+        const result = document.querySelector('div.resultado')
+        
+        function calcular(){
+            let retorno, color;
+
+            let vel = Number.parseInt(document.querySelector('input#vel').value)
+
+            if (vel > 60){
+                retorno = "Você recebeu uma multa por andar acima da velocidade permitida."
+                color = 'red'
+            } else{
+                retorno = "Você está abaixo da velocidade máxima aceita."
+                color = 'aqua'
+            }
+
+            document.querySelector('div.msg').innerHTML = '<br>Dirija sempre usando o cinto de segurança para seu bem estar.'
+
+            result.innerText = retorno, result.style.color = color, result.style.margin = '0px'
+            result.style.marginTop = '5px'
+
+            document.querySelector("input.entrada").style.borderColor = color
+        }
+    </script>
+</body>
+</html>
