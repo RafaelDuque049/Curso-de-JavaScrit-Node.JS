@@ -14,15 +14,22 @@
         .button{
             background-color: aqua;
             width: 100px;
-            height: 30px;
+            height: 28px;
+            border-radius: 10px;
+        }
+        .entrada{
+            color: white;
+            border-color: aqua;
+            background-color: rgb(39, 36, 36);
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
     <h1>Praticando</h1><hr>
-    <input type="number" name="" id="n1"> +
-    <input type="number" name="" id="n2">
-    <input type="button" value="button" onclick="resultado()" class="button">
+    <input type="number" name="" class= 'entrada' id="n1"> +
+    <input type="number" name="" class= 'entrada' id="n2">
+    <input type="button" value="SOMAR" onclick="resultado()" class="button">
     <div class="resultado">resultado</div>
 
     <script>
@@ -31,8 +38,8 @@
 
             const num1 = Number.parseInt(n1 == ''? 0 : n1), num2 = Number.parseInt(n2 == ''? 0 : n2)
 
-            document.querySelector("div.resultado").innerHTML = `${num1} + ${num2} = ${num1 + num2}`
+            document.querySelector("div.resultado").innerText = `${num1} + ${num2} = ${num1 + num2}`
         }
     </script>
 </body>
-</html> 
+</html>
