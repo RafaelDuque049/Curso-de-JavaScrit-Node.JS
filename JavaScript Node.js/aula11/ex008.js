@@ -1,4 +1,4 @@
-// Conteúdo: Condição.
+// Conteúdo: Condição simples.
 
 let vel = 78.2
 

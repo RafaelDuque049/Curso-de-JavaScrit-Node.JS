@@ -1,4 +1,4 @@
-// Conteúdo: Condição.
+// Conteúdo: Condições simples e compostas.
 
 let pais = 'Eua'
 
