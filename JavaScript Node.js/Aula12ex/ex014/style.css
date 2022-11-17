@@ -1,6 +1,10 @@
 body{
     font: normal 15pt Arial;
-    background-color: rgb(34, 31, 28);
+    background-color: rgb(32, 30, 29);
+}
+
+div{
+    text-align: center;
 }
 
 header{
@@ -26,13 +30,9 @@ footer{
 
 .imagem{
     border-radius: 50%;
-    margin: 5% 5% 5% 15%;
+    padding: 8px;
 }
 
 .msg{
-    text-align: center;
-}
-
-.time{
-    text-align: center;
+    margin: 10px;
 }
