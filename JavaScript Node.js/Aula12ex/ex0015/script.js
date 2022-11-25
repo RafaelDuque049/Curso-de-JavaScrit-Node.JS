@@ -13,16 +13,14 @@ function check(){
         
         let fsex = document.getElementsByName('sex_select')
 
-        const genero = fsex[0].checked ? 'Homem' : 'Mulher'
+        const genero = (fsex[0].checked ? 'Homem' : 'Mulher')
 
         const idade = (data - ano);
 
         img.setAttribute('id', 'foto')
 
-        let imagem = document.querySelector('img#foto')
-
         if (idade >= 0 && idade < 10){
-            imagem.src = (genero == 'Homem' ? 'bebe_M.jpg' : '/bebe.jpg')
+            img.setAttribute('src', (genero == 'Homem' ? 'bebe_M.jpg' : 'bebe.jpg'))
         }
 
         result.style.textAlign = 'center'
