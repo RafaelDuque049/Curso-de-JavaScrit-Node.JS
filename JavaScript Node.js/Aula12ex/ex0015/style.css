@@ -37,3 +37,8 @@ footer{
     border-radius: 10px;
     font-size: 15px;
 }
+
+#foto{
+    border-radius: 50%;
+    margin: 20px;
+}
