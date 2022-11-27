@@ -25,3 +25,15 @@ h1{
     font-size: 20px;
     margin: 20px 0px 20px 0px;
 }
+
+.box2{
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    line-height: 100px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}

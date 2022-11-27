@@ -21,7 +21,7 @@ function check(){
         
         img.setAttribute('id', 'foto')
 
-        if (idade >= 0 && idade <= 10) {
+        if (idade > 0 && idade <= 10) {
             img.setAttribute('src', (genero == 'Homem' ? 'images/bebe_M.jpg' : 'images/bebe.jpg'))
         
         } else if (idade <= 21) {

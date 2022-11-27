@@ -38,6 +38,12 @@ footer{
     font-size: 15px;
 }
 
+.caixa{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
 #foto{
     border-radius: 50%;
     margin: 20px;
