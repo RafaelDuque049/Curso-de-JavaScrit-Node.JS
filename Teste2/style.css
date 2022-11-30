@@ -1,0 +1,23 @@
+body{
+    background-color: #303030;
+    color: white;
+    font-size: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+span{
+    margin: 30px;
+}
+
+#box{
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}

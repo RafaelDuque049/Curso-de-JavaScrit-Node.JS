@@ -1,4 +1,4 @@
-// Verificador de idade e sexo.
+ // Verificador de idade e sexo.
 
 function check(){
     let ano = document.querySelector('.Ano_nascido').value
@@ -13,11 +13,11 @@ function check(){
         return alert('//Erro//  Descrições incorretas, tente novamente.')
         
     } else {
-        let img = document.createElement("img")
-        
         const fsex = document.getElementsByName('sex_select')
         
         const genero = (fsex[0].checked ? 'Homem' : 'Mulher')
+
+        let img = document.createElement("img")
         
         img.setAttribute('id', 'foto')
 
