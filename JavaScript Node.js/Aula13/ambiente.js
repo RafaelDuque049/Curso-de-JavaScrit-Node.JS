@@ -19,5 +19,5 @@ while (contador <= 6) {
 // Estrutura de repetição de teste lógico no final
 do {
     console.log('Tudo bem?')
-    --contador
+    ++contador
 } while (contador <= 6);
