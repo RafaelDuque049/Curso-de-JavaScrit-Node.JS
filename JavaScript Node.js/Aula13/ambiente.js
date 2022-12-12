@@ -16,6 +16,10 @@ while (contador <= 6) {
 };
 */
 
+for (var num = 0; num <= 5 ; num += 1) {
+    console.log('sim')
+}
+
 // Estrutura de repetição de teste lógico no final
 do {
     console.log('Tudo bem?')

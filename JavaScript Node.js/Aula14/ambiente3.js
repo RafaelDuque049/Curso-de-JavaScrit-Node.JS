@@ -5,9 +5,14 @@ let num = 0;
 while (num < 10) {
     console.log(num)
     ++num
-}
+};
 
-for (let num2 = num ; num2 >= 0 ; num2 -= 1) {
+do {
     console.log(num)
     num--
-}
+} while (num > 0);
+
+for (let num2 = num ; num2 <= 10 ; num2 += 1) {
+    console.log(num)
+    num++
+};
