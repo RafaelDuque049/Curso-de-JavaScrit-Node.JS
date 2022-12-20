@@ -1,5 +1,5 @@
 function contar() {
-    let msg = String()
+    let msg = "Contando: <br>"
 
     let resultado = document.querySelector('#resultado')
 
@@ -28,6 +28,5 @@ function contar() {
         }
     }
 
-    console.log(msg)
     resultado.innerHTML = `${msg} &#x1F3C1;`
 }
