@@ -1,0 +1,54 @@
+body{
+    background-color: aquamarine;
+}
+
+header{
+    text-align: center;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.444);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div{
+    margin: 15px;
+}
+
+#numero{
+    width: 120px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.241);
+}
+
+#lista_numeros{
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.478);
+}
+
+.botão, #finalizar{
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 10px;
+    width: 80px;
+}
+
+.resultados{
+    background-color: rgba(128, 128, 128, 0.472);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.382);
+}
