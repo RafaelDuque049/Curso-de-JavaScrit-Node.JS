@@ -39,11 +39,15 @@ div{
     box-shadow: 3px 3px rgba(0, 0, 0, 0.478);
 }
 
-.botão, #finalizar{
+#botão, #finalizar, #zerar{
     cursor: pointer;
     background-color: orange;
     border-radius: 10px;
     width: 80px;
+}
+
+#zerar{
+    margin-left: 15px;
 }
 
 .resultados{

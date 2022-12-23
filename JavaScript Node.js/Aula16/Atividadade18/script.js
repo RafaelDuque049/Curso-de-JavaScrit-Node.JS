@@ -1,6 +1,7 @@
 let lista_valor = [];
 
 
+
 function adicionar() {
     let lista = document.querySelector('#lista_numeros')
 
@@ -27,7 +28,7 @@ function adicionar() {
     lista_valor.push(numero)
 
     lista.appendChild(new_element)
-}
+};
 
 function finalizar() {
     if (lista_valor.length == 0) {
@@ -65,4 +66,30 @@ function finalizar() {
     ]
 
     add_text(mensag)
-}
+};
+
+function Zerar_lista() {
+    if (lista_valor.length == 0) {
+        return alert('É necessário haver números salvos na lista para realizar a limpeza.')
+    };
+    
+    const deletar = function() {
+        let reset = document.createElement('option'), salvar = document.querySelector('select')
+
+        lista_valor = []
+
+        document.querySelector('.resultados').innerHTML = 'Informações';
+
+        reset.disabled = true, reset.innerHTML = 'Insira um valor acima &#x2B06;&#xFE0F;'
+
+        salvar.innerHTML = null;
+
+        salvar.appendChild(reset)
+    };
+    
+    const continuar = confirm('Deseja mesmo deletar todos os itens da lista?')
+
+    if (continuar == true) {
+        deletar()
+    };
+};

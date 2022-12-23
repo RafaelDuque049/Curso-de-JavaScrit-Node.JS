@@ -16,7 +16,7 @@
     <section>
         <div id="adição">
             Número (Entre 1 a 100): <input type="number" name="" id="numero" min="1" max="100">
-            <input type="button" value="Adicionar" class="botão" onclick="adicionar()">
+            <input type="button" value="Adicionar" id="botão" onclick="adicionar()">
         </div>
 
         <div>
@@ -24,9 +24,10 @@
                 <option disabled>Insira um valor acima &#x2B06;&#xFE0F;</option>
             </select>
         </div>
-
-        <div>
+        
+        <div class="buttons">
             <input type="button" value="Finalizar" id="finalizar" onclick="finalizar()">
+            <input type="button" value="Zerar Lista" id="zerar" onclick="Zerar_lista()">
         </div>
 
         <div class="resultados">Informações</div>
