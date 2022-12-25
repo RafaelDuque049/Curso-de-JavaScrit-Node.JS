@@ -26,13 +26,13 @@ footer{
 input:not(#numero){
     cursor: pointer;
     background-color: orange;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 80px;
     transition: box-shadow .3s;
 }
 
 input:not(#numero):hover{
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.338);
+    box-shadow: 3px 4px rgba(0, 0, 0, 0.338);
 }
 
 div{
@@ -46,6 +46,8 @@ div{
 }
 
 #lista_numeros{
+    text-align: center;
+    width: 275px;
     border-radius: 10px;
     padding: 5px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.478);

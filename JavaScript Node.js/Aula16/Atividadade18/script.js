@@ -2,18 +2,15 @@ let lista_valor = [];
 
 let Element_selected = null;
 
-function selecionado() {
-    try {
-        let selected = document.querySelector('#lista_numeros');
-        
-        Element_selected = selected.options[selected.selectedIndex].value;
+let selected = document.querySelector('#lista_numeros');
 
-        console.log(Element_selected)
-    }
-    catch {
-        return null;
+const selecionado = function () {
+    Element_selected = {
+        id: selected.options[selected.selectedIndex].id,
+        value: selected.options[selected.selectedIndex].value
     };
 };
+
 
 function adicionar() {
     let lista = document.querySelector('#lista_numeros');
@@ -34,7 +31,9 @@ function adicionar() {
         
     document.querySelector('.resultados').innerHTML = 'Informações';
 
-    new_element.value = 'Element_'+numero;
+    new_element.id = 'Element_'+numero;
+
+    new_element.value = numero;
     
     new_element.innerHTML = `Valor ${numero} adicionado.`;
     
@@ -108,20 +107,22 @@ function Zerar_lista() {
 };
 
 function deletar() {
-    let selected = document.querySelector('#lista_numeros');
-    
     if (lista_valor.length == 0) {
         return alert('É necessário ter itens selecionaveis na lista para deletar.')
     };
     
     try {
-        // É necessário selecionar o OPTION por querySelector ou outro forma. 
-        console.log(Element_selected)
+        const option_element = document.querySelector(`#${Element_selected.id}`);
         
-        selected.removeChild(Element_selected)
+        lista_valor = lista_valor.filter(item => item != Element_selected.value);
+        
+        Element_selected = null;
+
+        selected.removeChild(option_element);
     }
-    
     catch {
         return alert('É necessário selecionar um item para ser deletado')
     };
+
+    document.querySelector('.resultados').innerHTML = 'informações';
 };
