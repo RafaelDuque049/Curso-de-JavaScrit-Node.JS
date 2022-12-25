@@ -23,6 +23,18 @@ footer{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+input:not(#numero){
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 10px;
+    width: 80px;
+    transition: box-shadow .3s;
+}
+
+input:not(#numero):hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.338);
+}
+
 div{
     margin: 15px;
 }
@@ -39,14 +51,7 @@ div{
     box-shadow: 3px 3px rgba(0, 0, 0, 0.478);
 }
 
-#botão, #finalizar, #zerar{
-    cursor: pointer;
-    background-color: orange;
-    border-radius: 10px;
-    width: 80px;
-}
-
-#zerar{
+#zerar, #deletar{
     margin-left: 15px;
 }
 

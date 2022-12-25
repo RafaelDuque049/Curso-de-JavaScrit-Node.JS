@@ -20,7 +20,7 @@
         </div>
 
         <div>
-            <select id="lista_numeros" size="8">
+            <select id="lista_numeros" size="8" onclick="selecionado()">
                 <option disabled>Insira um valor acima &#x2B06;&#xFE0F;</option>
             </select>
         </div>
@@ -28,6 +28,7 @@
         <div class="buttons">
             <input type="button" value="Finalizar" id="finalizar" onclick="finalizar()">
             <input type="button" value="Zerar Lista" id="zerar" onclick="Zerar_lista()">
+            <input type="button" value="Deletar" id="deletar" onclick="deletar()">
         </div>
 
         <div class="resultados">Informações</div>
@@ -36,7 +37,7 @@
     <footer>
         <div>
             <a href="https://www.youtube.com/@CursoemVideo" target="_blank">
-                <u><i>&copy;CursoEmVideo</i></u>
+                <i>&copy;CursoEmVideo</i>
             </a>
         </div>
     </footer>
