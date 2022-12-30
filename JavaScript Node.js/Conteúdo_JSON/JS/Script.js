@@ -1,3 +1,22 @@
+/* Um Objeto JSON, suporta váriadas formas de dados, como: 
+    {
+        "inteiro": 12,
+        "flutuante": 34.1,
+        "string": "JSON",
+        "Array": [463, "Aprendendo", "462", true],
+        "boleano": true,
+        "bibliotecas": {
+            "Objeto1": "Lápis",
+            "Objetos": {
+                "Objeto_1": "Caneta",
+                "Objeto_2": "Folha"
+            }
+        }
+    }
+ */
+
+
+// É possível manter dois pacotes de informação em um JSON usando Array, dá seguinte fomra:
 const objeto = [{
     "nome": "Matheus",
     "idade": 45,
