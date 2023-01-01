@@ -27,11 +27,13 @@ footer{
     color: white;
     text-align: center;
     font-style: italic;
+    font-size: 15px;
 }
 
 .imagem{
     border-radius: 50%;
     padding: 8px;
+    user-select: none;
 }
 
 .imagem:hover{
