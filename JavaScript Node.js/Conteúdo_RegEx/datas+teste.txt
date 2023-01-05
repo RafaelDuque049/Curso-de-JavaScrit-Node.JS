@@ -1,0 +1,14 @@
+Mudar todas as datas para a forma do Brasil: 
+    ([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})
+    Função replace: $3/$2/$1
+
+2022-12-04
+2022-11-29
+2022-02-26
+2022-08-12
+2022-07-23
+2022-03-06
+2022-12-07
+
+
+todas as datas serão transformadas dentre as regras Brasileiras

@@ -1,0 +1,91 @@
+
+                        Entendendo a Estrutura de um RegEx
+
+
+[] = conchetes
+$ = Cifrão
+{} = chaves/quantificador
+() = parênteses
+
+==========================================================================================================================================================================================================
+
+No RegEx, o item/caracter a ser procurado é denominado dentre os conchetes, sendo assim, ele funciona basicamente desta seguinte forma:
+
+Exem: 
+    [0]     *Dentre os conchetes, está o item a ser procurado, nesse caso o número "0", o numero zero vai ser procurado em todo o arquivo ou string apresentada.*
+
+==========================================================================================================================================================================================================
+
+Quando digitado números/letras seguidas dentro dos conchetes, será procurado o primeiro e o segundo parámetro passado entre eles, dessa forma:
+
+Exem:
+    [02]    *Será procurado o número zero e o número dois separadamente*
+
+==========================================================================================================================================================================================================
+
+Já, quando digitado um dois números entre os conchetes, separado por um um traço, será procurado os números no intervalo entre eles:
+
+Exem:
+    [0-9]    *Vai ser procurado os numeros que estão entre zero e nove no arquivo ou string passada.*
+
+==========================================================================================================================================================================================================
+
+Quando for necessário estabelecer uma segunda regra para os caracteres, é usado da determinada forma:
+
+Exem:
+    [0][1]    *Assim, os caracteres a serem procurados são "01".*
+
+==========================================================================================================================================================================================================
+
+Mas no momento que for usado dois caracteres iguais, pode ser usado os quantificadores, que multiplica a regra:
+
+Exem:
+    [1]{2}   *O valor "1" vai ser multiplicado por dois, assim sendo procurado dessa forma "11".*
+
+==========================================================================================================================================================================================================
+
+Mas quando usado o quantificador junto ao intervalo de números dentre os conchetes, ele procurada aquele intervalo de números nas primeiras casas passadas pelo quantificador:
+
+Exem:
+    [0-9]{3}    *Quando passado o determinado número "04583" só as primeiras três casas seria identificadas, já que o número repassado no quantificador é três.*
+
+Obs: Quando o caracter passado não contém maior ou igual o valor passado dentro do quantificador ou não coincide com o tipo de dedo, ele não é mais destacado,
+já que não atende mais o padrão repassado, pois como não exemplo, ela não ia mais possuir a seguência de 3 casas do caracteres, ou dentre os números houvesse uma letra.
+
+==========================================================================================================================================================================================================
+
+Já quando usado o Cifrão($) no RegEx, ele funciona quase igual ao exemplo de cima, mas começa a contar a partir das ultímas linhas:
+
+Exem:
+    [0-9]{3}$   *Ele verifica se as ultímas três casas repassadas contém algum número do intervalo.*
+
+==========================================================================================================================================================================================================
+
+No exemplo acima, quando usado o acento circunflexo, será procurado na linha apenas os dados que contém exatamente a quantidade passada dentro o quantificador:
+
+Exem:
+    ^[0-9]{3}$     *Se um número repassado conter um número maior ou menor que três casas, não será marcado/aceito*
+
+==========================================================================================================================================================================================================
+
+Quando usado o sinal de adição(+) no RegEx, é para determinar que aquela regra pode se repetir em qualquer quantidade diante sua posição:
+
+Exem:
+    [0-9]+[a-z]     *Qualquer valor que contém indeterminada quantidade de número, mas com uma letra seguida dela, vai ser marcada/aprovada.*
+
+==========================================================================================================================================================================================================
+
+Substituição no RegEx pelos grupos criados com os parênteses:
+
+Prática: 
+    (grupo 1 de regras)(grupo 2 de regras)
+    replace: $2/$1 = (grupo 2 de regras)/(grupo 1 de regras)
+
+
+Exem em Datas:
+    Data para exemplo: 2022-12-25
+
+        1                 2                3
+    ([0-9]{4})  [-]  ([0-9]{2})  [-]  ([0-9]{2})
+    
+    replace:  $3/$2/$1 = 25/12/2022
