@@ -33,7 +33,8 @@ footer{
 .imagem{
     border-radius: 50%;
     padding: 8px;
-    user-select: none;
+    width: 450px;
+    height: 450px;
 }
 
 .imagem:hover{

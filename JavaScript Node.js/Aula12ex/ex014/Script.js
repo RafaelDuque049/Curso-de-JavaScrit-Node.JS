@@ -1,6 +1,5 @@
 
 function time_page() {
-
     function eventos(msg, back, image) {
         document.querySelector('.msg').innerHTML = msg
     
@@ -19,7 +18,6 @@ function time_page() {
         const time_hours = time_now.getHours();
 
         if (time_hours != time_fixed) {
-             
             if (time_hours < 6) {
                 eventos("Tenha uma boa madrugada!!", 'rgb(19, 1, 102)', 'images/madrugada.png')
 
@@ -41,7 +39,6 @@ function time_page() {
 
             time_fixed = time_hours
         };
-        
         text.innerHTML = `Horário: ${time_now.getHours()}:${time_now.getMinutes()}:${time_now.getSeconds()}`;
     }, 500);
 };

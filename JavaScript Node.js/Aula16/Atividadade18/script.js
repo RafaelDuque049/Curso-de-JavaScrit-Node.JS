@@ -42,6 +42,7 @@ function adicionar() {
     lista.appendChild(new_element)
 };
 
+
 function finalizar() {
     if (lista_valor.length == 0) {
         return alert('Adicione valores antes de finalizar.\n[Tente Novamente]')
@@ -80,6 +81,7 @@ function finalizar() {
     add_text(mensag)
 };
 
+
 function Zerar_lista() {
     if (lista_valor.length == 0) {
         return alert('É necessário haver números salvos na lista para realizar a limpeza.')
@@ -105,6 +107,7 @@ function Zerar_lista() {
         deletar()
     };
 };
+
 
 function deletar() {
     if (lista_valor.length == 0) {
